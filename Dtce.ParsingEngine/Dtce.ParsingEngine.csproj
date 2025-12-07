@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-Dtce.ParsingEngine-6e35a5a1-4c6b-4016-b218-4436d34a55fc</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="3.3.0" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.61" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.10" />
+    <PackageReference Include="Microsoft.ML" Version="3.0.1" />
+    <PackageReference Include="UglyToad.PdfPig" Version="1.7.0-custom-5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dtce.Common\Dtce.Common.csproj" />
+    <ProjectReference Include="..\Dtce.Infrastructure\Dtce.Infrastructure.csproj" />
+    <ProjectReference Include="..\Dtce.JobQueue\Dtce.JobQueue.csproj" />
+    <ProjectReference Include="..\Dtce.Persistence\Dtce.Persistence.csproj" />
+  </ItemGroup>
+</Project>

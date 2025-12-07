@@ -1,0 +1,328 @@
+{
+  "VisualTheme": {
+    "ColorPalette": [
+      {
+        "Name": "primary",
+        "HexCode": "#000000"
+      },
+      {
+        "Name": "secondary",
+        "HexCode": "#666666"
+      },
+      {
+        "Name": "accent",
+        "HexCode": "#5B9BD5"
+      }
+    ],
+    "FontMap": {
+      "Normal": {
+        "Family": "Calibri",
+        "Size": 11,
+        "Weight": "normal",
+        "Color": "#000000"
+      },
+      "heading 1": {
+        "Family": "Calibri",
+        "Size": 24,
+        "Weight": "bold",
+        "Color": "#000000"
+      },
+      "heading 2": {
+        "Family": "Calibri",
+        "Size": 18,
+        "Weight": "bold",
+        "Color": "#000000"
+      },
+      "heading 3": {
+        "Family": "Calibri",
+        "Size": 14,
+        "Weight": "bold",
+        "Color": "#000000"
+      },
+      "heading 4": {
+        "Family": "Calibri",
+        "Size": 12,
+        "Weight": "bold",
+        "Color": "#000000"
+      },
+      "heading 5": {
+        "Family": "Calibri",
+        "Size": 11,
+        "Weight": "bold",
+        "Color": "#000000"
+      },
+      "heading 6": {
+        "Family": "Calibri",
+        "Size": 10,
+        "Weight": "bold",
+        "Color": "#000000"
+      },
+      "Default Paragraph Font": {
+        "Family": "Calibri",
+        "Size": 11,
+        "Weight": "normal",
+        "Color": "#000000"
+      },
+      "Normal Table": {
+        "Family": "Calibri",
+        "Size": 11,
+        "Weight": "normal",
+        "Color": "#000000"
+      },
+      "No List": {
+        "Family": "Calibri",
+        "Size": 11,
+        "Weight": "normal",
+        "Color": "#000000"
+      },
+      "TableNormal": {
+        "Family": "Calibri",
+        "Size": 11,
+        "Weight": "normal",
+        "Color": "#000000"
+      },
+      "Title": {
+        "Family": "Calibri",
+        "Size": 36,
+        "Weight": "bold",
+        "Color": "#000000"
+      },
+      "Subtitle": {
+        "Family": "Georgia",
+        "Size": 24,
+        "Weight": "normal",
+        "Color": "#666666"
+      },
+      "header": {
+        "Family": "Calibri",
+        "Size": 11,
+        "Weight": "normal",
+        "Color": "#000000"
+      },
+      "Header Char": {
+        "Family": "Arial",
+        "Size": 11,
+        "Weight": "normal",
+        "Color": "#000000"
+      },
+      "footer": {
+        "Family": "Calibri",
+        "Size": 11,
+        "Weight": "normal",
+        "Color": "#000000"
+      },
+      "Footer Char": {
+        "Family": "Arial",
+        "Size": 11,
+        "Weight": "normal",
+        "Color": "#000000"
+      },
+      "Intense Emphasis": {
+        "Family": "Calibri",
+        "Size": 11,
+        "Weight": "normal",
+        "Color": "#5B9BD5"
+      },
+      "Hyperlink": {
+        "Family": "Calibri",
+        "Size": 11,
+        "Weight": "normal",
+        "Color": "#0000FF"
+      },
+      "Body Text": {
+        "Family": "Times New Roman",
+        "Size": 11,
+        "Weight": "normal",
+        "Color": "#000000"
+      },
+      "Body Text Char": {
+        "Family": "Times New Roman",
+        "Size": 11,
+        "Weight": "normal",
+        "Color": "#000000"
+      },
+      "Normal (Web)": {
+        "Family": "Times New Roman",
+        "Size": 12,
+        "Weight": "normal",
+        "Color": "#000000"
+      },
+      "Unresolved Mention": {
+        "Family": "Calibri",
+        "Size": 11,
+        "Weight": "normal",
+        "Color": "#605E5C"
+      },
+      "il": {
+        "Family": "Calibri",
+        "Size": 11,
+        "Weight": "normal",
+        "Color": "#000000"
+      },
+      "List Paragraph": {
+        "Family": "Calibri",
+        "Size": 11,
+        "Weight": "normal",
+        "Color": "#000000"
+      },
+      "white-space-pre": {
+        "Family": "Calibri",
+        "Size": 11,
+        "Weight": "normal",
+        "Color": "#000000"
+      },
+      "citation-74": {
+        "Family": "Calibri",
+        "Size": 11,
+        "Weight": "normal",
+        "Color": "#000000"
+      }
+    },
+    "LayoutRules": {
+      "PageWidth": 215.9136,
+      "PageHeight": 279.4176,
+      "Orientation": "portrait",
+      "Margins": {
+        "Top": 12.7008,
+        "Bottom": 12.7008,
+        "Left": 12.7008,
+        "Right": 12.7008
+      }
+    }
+  },
+  "SectionHierarchy": {
+    "Sections": [
+      {
+        "SectionTitle": "Document Content",
+        "PlaceholderId": "placeholder_document_content",
+        "SubSections": []
+      },
+      {
+        "SectionTitle": "Professional Summary",
+        "PlaceholderId": "placeholder_section_1",
+        "SubSections": [
+          {
+            "SectionTitle": "AI \u0026 Innovation: Generative AI Strategy (LLMs), AI-Assisted Delivery (Cursor AI, GitHub Copilot), Agentic Systems Development (Copilot Studio), Prompt Engineering, AI Governance Guardrails.",
+            "PlaceholderId": "placeholder_subsection_2",
+            "SubSections": []
+          },
+          {
+            "SectionTitle": "Agile \u0026 Teams: Squad facilitation, Sprint planning, Definition of done, Dependency mapping, Backlog refinement, Task Prioritisation.",
+            "PlaceholderId": "placeholder_subsection_3",
+            "SubSections": []
+          },
+          {
+            "SectionTitle": "Tools \u0026 Cloud: AWS, Azure, Terraform, Docker, Azure DevOps, Jira Company Managed, Confluence, MS Project, GitHub, Miro, Lucidchart, Visual Studio, VS Code.",
+            "PlaceholderId": "placeholder_subsection_4",
+            "SubSections": []
+          }
+        ]
+      },
+      {
+        "SectionTitle": "Work History",
+        "PlaceholderId": "placeholder_section_5",
+        "SubSections": [
+          {
+            "SectionTitle": "Responsibilities",
+            "PlaceholderId": "placeholder_subsection_6",
+            "SubSections": []
+          }
+        ]
+      },
+      {
+        "SectionTitle": "Achievements",
+        "PlaceholderId": "placeholder_section_7",
+        "SubSections": [
+          {
+            "SectionTitle": "Responsibilities",
+            "PlaceholderId": "placeholder_subsection_8",
+            "SubSections": []
+          }
+        ]
+      },
+      {
+        "SectionTitle": "Achievements",
+        "PlaceholderId": "placeholder_section_9",
+        "SubSections": [
+          {
+            "SectionTitle": "Responsibilities",
+            "PlaceholderId": "placeholder_subsection_10",
+            "SubSections": []
+          }
+        ]
+      },
+      {
+        "SectionTitle": "Achievements",
+        "PlaceholderId": "placeholder_section_11",
+        "SubSections": []
+      }
+    ]
+  },
+  "LogoMap": [
+    {
+      "AssetId": "asset_test-20251112203505181_1",
+      "AssetType": "image",
+      "BoundingBox": {
+        "X": 0,
+        "Y": 0,
+        "Width": 100,
+        "Height": 100,
+        "PageNumber": 1
+      },
+      "SecureUrl": "file:///C:/Users/brill/CursorProject/DTCE%20API/SampleDocs/Test3/storage/images/test-20251112203505181/asset_test-20251112203505181_1.jpg",
+      "StorageKey": "images/test-20251112203505181/asset_test-20251112203505181_1.jpg"
+    },
+    {
+      "AssetId": "asset_test-20251112203505181_2",
+      "AssetType": "image",
+      "BoundingBox": {
+        "X": 0,
+        "Y": 0,
+        "Width": 100,
+        "Height": 100,
+        "PageNumber": 1
+      },
+      "SecureUrl": "file:///C:/Users/brill/CursorProject/DTCE%20API/SampleDocs/Test3/storage/images/test-20251112203505181/asset_test-20251112203505181_2.png",
+      "StorageKey": "images/test-20251112203505181/asset_test-20251112203505181_2.png"
+    },
+    {
+      "AssetId": "asset_test-20251112203505181_3",
+      "AssetType": "image",
+      "BoundingBox": {
+        "X": 0,
+        "Y": 0,
+        "Width": 100,
+        "Height": 100,
+        "PageNumber": 1
+      },
+      "SecureUrl": "file:///C:/Users/brill/CursorProject/DTCE%20API/SampleDocs/Test3/storage/images/test-20251112203505181/asset_test-20251112203505181_3.png",
+      "StorageKey": "images/test-20251112203505181/asset_test-20251112203505181_3.png"
+    },
+    {
+      "AssetId": "asset_test-20251112203505181_4",
+      "AssetType": "image",
+      "BoundingBox": {
+        "X": 0,
+        "Y": 0,
+        "Width": 100,
+        "Height": 100,
+        "PageNumber": 1
+      },
+      "SecureUrl": "file:///C:/Users/brill/CursorProject/DTCE%20API/SampleDocs/Test3/storage/images/test-20251112203505181/asset_test-20251112203505181_4.png",
+      "StorageKey": "images/test-20251112203505181/asset_test-20251112203505181_4.png"
+    },
+    {
+      "AssetId": "asset_test-20251112203505181_5",
+      "AssetType": "image",
+      "BoundingBox": {
+        "X": 0,
+        "Y": 0,
+        "Width": 100,
+        "Height": 100,
+        "PageNumber": 1
+      },
+      "SecureUrl": "file:///C:/Users/brill/CursorProject/DTCE%20API/SampleDocs/Test3/storage/images/test-20251112203505181/asset_test-20251112203505181_5.png",
+      "StorageKey": "images/test-20251112203505181/asset_test-20251112203505181_5.png"
+    }
+  ]
+}

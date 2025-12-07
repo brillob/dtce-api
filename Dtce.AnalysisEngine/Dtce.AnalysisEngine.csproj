@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-Dtce.AnalysisEngine-d626b655-1b60-4063-8e23-9d2595bc6969</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.10" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.5" />
+    <PackageReference Include="VaderSharp2" Version="3.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dtce.Common\Dtce.Common.csproj" />
+    <ProjectReference Include="..\Dtce.Infrastructure\Dtce.Infrastructure.csproj" />
+    <ProjectReference Include="..\Dtce.JobQueue\Dtce.JobQueue.csproj" />
+    <ProjectReference Include="..\Dtce.Persistence\Dtce.Persistence.csproj" />
+  </ItemGroup>
+</Project>

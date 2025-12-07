@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Swagger/OpenAPI packages removed due to .NET 9.0 compatibility issues -->
+    <!-- <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.10" /> -->
+    <!-- <PackageReference Include="Microsoft.OpenApi" Version="2.3.0" /> -->
+    <!-- <PackageReference Include="Swashbuckle.AspNetCore" Version="10.0.0" /> -->
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dtce.Common\Dtce.Common.csproj" />
+    <ProjectReference Include="..\Dtce.Infrastructure\Dtce.Infrastructure.csproj" />
+    <ProjectReference Include="..\Dtce.JobQueue\Dtce.JobQueue.csproj" />
+    <ProjectReference Include="..\Dtce.Persistence\Dtce.Persistence.csproj" />
+    <ProjectReference Include="..\Dtce.Identity\Dtce.Identity.csproj" />
+  </ItemGroup>
+
+</Project>

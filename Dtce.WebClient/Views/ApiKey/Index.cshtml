@@ -1,0 +1,157 @@
+@model IReadOnlyList<Dtce.Identity.Models.ApiKeyRecord>
+@{
+    ViewData["Title"] = "API Keys";
+    Layout = "_Layout";
+}
+
+<div style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
+    <div style="background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 30px; margin-bottom: 30px;">
+        <h2 style="color: #333; font-weight: bold; margin-bottom: 20px;">API Key Management</h2>
+        
+        @Html.AntiForgeryToken()
+        
+        <div style="margin-bottom: 30px;">
+            <h3 style="color: #666; font-size: 18px; margin-bottom: 15px;">Create New API Key</h3>
+            <div style="display: flex; gap: 10px;">
+                <input type="text" id="newKeyName" placeholder="API Key Name" style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px;" />
+                <button type="button" id="createKeyBtn" style="padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 500;">
+                    Create Key
+                </button>
+            </div>
+        </div>
+        
+        <div id="newKeyDisplay" style="display: none; margin-bottom: 20px; padding: 15px; background: #e7f3ff; border-radius: 4px; border: 1px solid #b3d9ff;">
+            <div style="margin-bottom: 10px; color: #0066cc; font-weight: 500;">Your new API key (copy this - it won't be shown again):</div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <code id="newKeyValue" style="flex: 1; padding: 10px; background: white; border: 1px solid #ddd; border-radius: 4px; font-family: monospace; word-break: break-all;"></code>
+                <button type="button" onclick="copyApiKey()" style="padding: 10px 15px; background: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer;">
+                    Copy
+                </button>
+            </div>
+        </div>
+        
+        <h3 style="color: #666; font-size: 18px; margin-bottom: 15px;">Your API Keys</h3>
+        
+        @if (Model != null && Model.Count > 0)
+        {
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="border-bottom: 2px solid #ddd;">
+                        <th style="text-align: left; padding: 12px; color: #666; font-weight: 500;">Name</th>
+                        <th style="text-align: left; padding: 12px; color: #666; font-weight: 500;">Created</th>
+                        <th style="text-align: left; padding: 12px; color: #666; font-weight: 500;">Status</th>
+                        <th style="text-align: right; padding: 12px; color: #666; font-weight: 500;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var key in Model)
+                    {
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 12px; color: #333;">@key.Name</td>
+                            <td style="padding: 12px; color: #666; font-size: 14px;">@key.CreatedAt.ToString("yyyy-MM-dd HH:mm")</td>
+                            <td style="padding: 12px;">
+                                <span style="padding: 4px 8px; background: #28a745; color: white; border-radius: 4px; font-size: 12px;">Active</span>
+                            </td>
+                            <td style="padding: 12px; text-align: right;">
+                                <button type="button" onclick="revokeKey('@key.Id')" style="padding: 6px 12px; background: #dc3545; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">
+                                    Revoke
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <div style="text-align: center; padding: 40px; color: #999;">
+                No API keys found. Create one above to get started.
+            </div>
+        }
+    </div>
+    
+    <div style="text-align: center;">
+        <a href="/Home" style="color: #007bff; text-decoration: none;">← Back to Home</a>
+    </div>
+</div>
+
+<script>
+    document.getElementById('createKeyBtn').addEventListener('click', async function() {
+        const name = document.getElementById('newKeyName').value.trim();
+        if (!name) {
+            alert('Please enter a name for the API key');
+            return;
+        }
+        
+            try {
+                const token = document.querySelector('input[name="__RequestVerificationToken"]')?.value || '';
+                const formData = new FormData();
+                formData.append('name', name);
+                formData.append('__RequestVerificationToken', token);
+                
+                const response = await fetch('/ApiKey/Create', {
+                    method: 'POST',
+                    body: formData
+                });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                document.getElementById('newKeyValue').textContent = result.apiKey;
+                document.getElementById('newKeyDisplay').style.display = 'block';
+                document.getElementById('newKeyName').value = '';
+                // Reload page after 2 seconds to show new key in list
+                setTimeout(() => window.location.reload(), 2000);
+            } else {
+                alert(result.message || 'Failed to create API key');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while creating the API key');
+        }
+    });
+    
+    async function revokeKey(keyId) {
+        if (!confirm('Are you sure you want to revoke this API key? This action cannot be undone.')) {
+            return;
+        }
+        
+        try {
+            const token = document.querySelector('input[name="__RequestVerificationToken"]')?.value || '';
+            const formData = new FormData();
+            formData.append('id', keyId);
+            formData.append('__RequestVerificationToken', token);
+            
+            const response = await fetch('/ApiKey/Revoke', {
+                method: 'POST',
+                body: formData
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                window.location.reload();
+            } else {
+                alert(result.message || 'Failed to revoke API key');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while revoking the API key');
+        }
+    }
+    
+    function copyApiKey() {
+        const keyValue = document.getElementById('newKeyValue').textContent;
+        navigator.clipboard.writeText(keyValue).then(() => {
+            alert('API key copied to clipboard!');
+        });
+    }
+</script>
+
+<style>
+    body {
+        background: #f5f5f5;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+</style>
+

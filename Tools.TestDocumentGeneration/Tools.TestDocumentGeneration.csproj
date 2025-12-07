@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dtce.Common\Dtce.Common.csproj" />
+    <ProjectReference Include="..\Dtce.DocumentRendering\Dtce.DocumentRendering.csproj" />
+    <ProjectReference Include="..\Dtce.Infrastructure\Dtce.Infrastructure.csproj" />
+    <ProjectReference Include="..\Dtce.ParsingEngine\Dtce.ParsingEngine.csproj" />
+    <ProjectReference Include="..\Dtce.Persistence\Dtce.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>
+
